@@ -9,6 +9,7 @@ namespace Aptek.Models
     {
         public List<Drug> Drugs { get; set; }
         public List<Category> Categories { get; set; }
+        public List<Article> Articles { get; set; }
 
     }
 }

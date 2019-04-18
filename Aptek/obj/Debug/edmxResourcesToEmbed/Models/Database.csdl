@@ -8,6 +8,7 @@
     <Property Name="Title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
     <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Photo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedAt" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityType Name="Category">
     <Key>

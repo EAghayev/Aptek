@@ -66,7 +66,7 @@
         <div class="container-menu-header" style="position:unset;">
             <div class="wrap_header">
                 <!-- Logo -->
-                <a href="index.html" class="logo">
+                <a href="@Url.Action("index","home")" class="logo">
                     <img src="~/Public/images/logo1.jpg" alt="IMG-LOGO">
                 </a>
 
@@ -75,11 +75,11 @@
                     <nav class="menu">
                         <ul class="main_menu">
                             <li class="bg-black">
-                                <a href="index.html">Əsas səhifə</a>
+                                <a href="@Url.Action("index","home")">Əsas səhifə</a>
                             </li>
 
                             <li>
-                                <a href="index.html">Dərmanlar</a>
+                                <a href="@Url.Action("index","drugs")">Dərmanlar</a>
                                 <ul class="sub_menu">
                                     <li>
                                         <a href="@Url.Action("index","drugs",new { id = 1 })">Göz dərmanları</a>
@@ -101,7 +101,7 @@
 
 
                             <li>
-                                <a href="blog.html">Məqalələr</a>
+                                <a href="@Url.Action("index","blogs")">Məqalələr</a>
                             </li>
 
                             <li>

@@ -21,7 +21,8 @@ namespace Aptek.Controllers
             IndexModel model = new IndexModel
             {
                 Categories = db.Categories.ToList(),
-                Drugs = db.Drugs.ToList()
+                Drugs = db.Drugs.ToList(),
+                Articles=db.Articles.ToList()
             };
             return View(model);
         }

@@ -8,6 +8,7 @@
     <Property Name="Title" Type="nvarchar" MaxLength="150" />
     <Property Name="Text" Type="nvarchar(max)" />
     <Property Name="Photo" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedAt" Type="datetime" />
   </EntityType>
   <EntityType Name="Categories">
     <Key>

@@ -2335,4 +2335,7 @@ input.num-product::-webkit-inner-spin-button {
     margin: 0; 
 }
 
-
+.my-bg-photo {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

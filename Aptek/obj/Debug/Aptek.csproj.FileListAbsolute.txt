@@ -73,7 +73,6 @@ C:\Users\Eagha\source\repos\Aptek\Aptek\bin\Antlr3.Runtime.pdb
 C:\Users\Eagha\source\repos\Aptek\Aptek\bin\System.Diagnostics.DiagnosticSource.xml
 C:\Users\Eagha\source\repos\Aptek\Aptek\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 C:\Users\Eagha\source\repos\Aptek\Aptek\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Eagha\source\repos\Aptek\Aptek\obj\Debug\Aptek.csprojAssemblyReference.cache
 C:\Users\Eagha\source\repos\Aptek\Aptek\obj\Debug\Aptek.csproj.CoreCompileInputs.cache
 C:\Users\Eagha\source\repos\Aptek\Aptek\obj\Debug\Aptek.csproj.CopyComplete
 C:\Users\Eagha\source\repos\Aptek\Aptek\obj\Debug\Aptek.dll
@@ -82,3 +81,9 @@ C:\Users\Eagha\source\repos\Aptek\Aptek\bin\EntityFramework.dll
 C:\Users\Eagha\source\repos\Aptek\Aptek\bin\EntityFramework.SqlServer.dll
 C:\Users\Eagha\source\repos\Aptek\Aptek\bin\EntityFramework.xml
 C:\Users\Eagha\source\repos\Aptek\Aptek\bin\EntityFramework.SqlServer.xml
+C:\Users\Eagha\source\repos\Aptek\Aptek\bin\System.Net.Http.Formatting.dll
+C:\Users\Eagha\source\repos\Aptek\Aptek\bin\System.Web.Http.dll
+C:\Users\Eagha\source\repos\Aptek\Aptek\bin\System.Web.Http.WebHost.dll
+C:\Users\Eagha\source\repos\Aptek\Aptek\bin\System.Net.Http.Formatting.xml
+C:\Users\Eagha\source\repos\Aptek\Aptek\bin\System.Web.Http.xml
+C:\Users\Eagha\source\repos\Aptek\Aptek\bin\System.Web.Http.WebHost.xml
