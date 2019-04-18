@@ -1,0 +1,25 @@
+﻿@model List<Aptek.Models.Drug>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <div class="row m-4">
+        @foreach (var drug in Model)
+        {
+        <div class="col-md-4">
+            <div class="block1 hov-img-zoom pos-relative m-b-30 drug-box">
+                <img src="~/Public/images/drugs/@drug.Photo" alt="IMG-BENNER">
+
+                <div class="block1-wrapbtn w-size2">
+                    <!-- Button -->
+                    <a href="@Url.Action("details","drugs",new {id=drug.Id})" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+                        @drug.Name
+                    </a>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>
+
