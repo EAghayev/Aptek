@@ -201,4 +201,10 @@
         $('.video-mo-01').css('opacity','0');
     });
 
+
+    $("search-form").submit(function (e) {
+        e.preventDefault();
+        console.log($("#search-input").val())
+    })
+
 })(jQuery);

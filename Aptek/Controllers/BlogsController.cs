@@ -15,7 +15,8 @@ namespace Aptek.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var model = db.Articles.ToList();
+            return View(model);
         }
 
         public ActionResult Detail(int id)

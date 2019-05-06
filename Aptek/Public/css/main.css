@@ -138,14 +138,15 @@ ul, li {
 
 
 /* ------------------------------------ */
-input {
+/*input {
 	outline: none;
 	border: none !important;
-}
+}*/
 
 textarea {
   outline: none;
 }
+
 
 /* textarea:focus, input:focus {
   border-color: transparent !important;
@@ -2339,3 +2340,47 @@ input.num-product::-webkit-inner-spin-button {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.contact-box {
+    box-shadow: 10px 10px 5px grey;
+    border: 3px solid #6a4420;
+    padding: 8px;
+    border-radius:5px;
+    min-height:120px;
+}
+.copyright-span {
+    border-top: 1px solid #e5e5e5;
+    padding: 25px 0;
+    font-size: 12px;
+    background: #444343e3;
+    text-align: center;
+    color: white;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin-top: 70px;
+}
+.search-bar .search-container {
+    float: right;
+}
+
+.search-bar input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    /*border: none;*/
+}
+
+.search-bar .search-container button {
+    float: right;
+    padding: 8px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+    .search-bar .search-container button:hover {
+        background: #ccc;
+    }
+

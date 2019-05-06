@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="AptekModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="AptekEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Articles" EntityType="AptekModel.Article" />
+    <EntitySet Name="Categories" EntityType="AptekModel.Category" />
+    <EntitySet Name="Drugs" EntityType="AptekModel.Drug" />
+    <AssociationSet Name="FK_Drugs_Categories" Association="AptekModel.FK_Drugs_Categories">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Drug" EntitySet="Drugs" />
+    </AssociationSet>
+    <EntitySet Name="Settings" EntityType="AptekModel.Setting" />
+  </EntityContainer>
   <EntityType Name="Article">
     <Key>
       <PropertyRef Name="Id" />
@@ -16,8 +26,8 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Drugs" Relationship="Self.FK_Drugs_Categories" FromRole="Categories" ToRole="Drugs" />
     <Property Name="Photo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Drugs" Relationship="AptekModel.FK_Drugs_Categories" FromRole="Category" ToRole="Drug" />
   </EntityType>
   <EntityType Name="Drug">
     <Key>
@@ -30,27 +40,33 @@
     <Property Name="ProductionDate" Type="DateTime" Precision="3" />
     <Property Name="ValidityDuration" Type="Byte" />
     <Property Name="Photo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Category" Relationship="Self.FK_Drugs_Categories" FromRole="Drugs" ToRole="Categories" />
+    <NavigationProperty Name="Category" Relationship="AptekModel.FK_Drugs_Categories" FromRole="Drug" ToRole="Category" />
   </EntityType>
   <Association Name="FK_Drugs_Categories">
-    <End Role="Categories" Type="Self.Category" Multiplicity="0..1" />
-    <End Role="Drugs" Type="Self.Drug" Multiplicity="*" />
+    <End Type="AptekModel.Category" Role="Category" Multiplicity="0..1" />
+    <End Type="AptekModel.Drug" Role="Drug" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Categories">
+      <Principal Role="Category">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Drugs">
+      <Dependent Role="Drug">
         <PropertyRef Name="CategoryId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="AptekEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Articles" EntityType="Self.Article" />
-    <EntitySet Name="Categories" EntityType="Self.Category" />
-    <EntitySet Name="Drugs" EntityType="Self.Drug" />
-    <AssociationSet Name="FK_Drugs_Categories" Association="Self.FK_Drugs_Categories">
-      <End Role="Categories" EntitySet="Categories" />
-      <End Role="Drugs" EntitySet="Drugs" />
-    </AssociationSet>
-  </EntityContainer>
+  <EntityType Name="Setting">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="About" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Phone1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Location" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="AboutPhoto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

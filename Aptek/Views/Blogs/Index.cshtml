@@ -1,7 +1,21 @@
-﻿
+﻿@model List<Aptek.Models.Article>
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
-
+    <div class="container">
+        <div class="row m-4">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4">
+                    <div class="card" >
+                        <img class="card-img-top" style="height:240px;" src="~/Public/images/articles/@item.Photo" alt="@item.Title">
+                        <div class="card-body" style="height:335px">
+                            <h5 class="card-title">@item.Title</h5>
+                            <p class="card-text">@(item.Text.Length>200?item.Text.Substring(0,250)+"...":item.Text)</p>
+                            <a href="@Url.Action("detail","blogs",new { id=item.Id})" class="btn btn-primary mt-2">Oxu</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>

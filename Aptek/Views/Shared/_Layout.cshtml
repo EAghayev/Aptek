@@ -34,6 +34,7 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="~/Public/css/util.css">
     <link rel="stylesheet" type="text/css" href="~/Public/css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 
     <style>
         .logo img {
@@ -41,19 +42,23 @@
             height: 120px !important;
             max-height: none;
         }
-        img{
-            max-width:100% !important;
+
+        img {
+            max-width: 100% !important;
         }
-        .drug-box{
-            width:100%;
-            height:250px;
+
+        .drug-box {
+            width: 100%;
+            height: 250px;
         }
-        .block1{
-            height:380px !important;
+
+        .block1 {
+            height: 380px !important;
         }
-        .block1 img{
-            height:100%;
-        }
+
+            .block1 img {
+                height: 100%;
+            }
     </style>
     <!--===============================================================================================-->
 </head>
@@ -105,11 +110,11 @@
                             </li>
 
                             <li>
-                                <a href="about.html">Haqqımızda</a>
+                                <a href="@Url.Action("about","home")">Haqqımızda</a>
                             </li>
 
                             <li>
-                                <a href="contact.html">Əlaqə</a>
+                                <a href="@Url.Action("contact","home")">Əlaqə</a>
                             </li>
                         </ul>
                     </nav>
@@ -298,124 +303,98 @@
 
     <!-- Footer -->
     <footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45" style="background:white">
-        <div class="flex-w p-b-90">
-            <div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
+        <div class="row">
+            <div class="col-md-4 text-center">
                 <h4 class="s-text12 p-b-30">
-                    GET IN TOUCH
+                    Bizimlə əlaqə
                 </h4>
 
                 <div>
                     <p class="s-text7 w-size27">
-                        Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+                        Hər hansısa bir sualınızmı var ? Elədirsə aşağıdakı nömrə ilə əlaqə saxlayın:
+                        <br />
+                        <b>051-922-91-52</b>
                     </p>
 
-                    <div class="flex-m p-t-30">
-                        <a href="https://facebook.com" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
-                        <a href="https://instagram.com" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
-                        <a href="https://youtube.com" class="fs-18 color1 p-r-20 fa fa-youtube-play"></a>
+                    <div class="flex-m p-t-30 justify-content-center">
+                        <a href="https://facebook.com" class="fs-18 color1 p-r-20 fab fa-facebook" target="_blank"></a>
+                        <a href="https://instagram.com" class="fs-18 color1 p-r-20 fab fa-instagram" target="_blank"></a>
+                        <a href="https://youtube.com" class="fs-18 color1 p-r-20 fab fa-youtube" target="_blank"></a>
                     </div>
                 </div>
             </div>
-
-            <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
+            <div class="col-md-4 text-center">
                 <h4 class="s-text12 p-b-30">
-                    Categories
+                    Kateqoriyalar
                 </h4>
 
                 <ul>
                     <li class="p-b-9">
-                        <a href="#" class="s-text7">
-                            Men
+                        <a href="@Url.Action("index","drugs",new { id = 1 })" class="s-text7">
+                            Göz dərmanları
                         </a>
                     </li>
 
                     <li class="p-b-9">
-                        <a href="#" class="s-text7">
-                            Women
+                        <a href="@Url.Action("index","drugs",new { id = 2 })" class="s-text7">
+                            Antibiotiklər
                         </a>
                     </li>
 
                     <li class="p-b-9">
-                        <a href="#" class="s-text7">
-                            Dresses
+                        <a href="@Url.Action("index","drugs",new { id = 3 })" class="s-text7">
+                            Ağrıkəsicilər
                         </a>
                     </li>
 
                     <li class="p-b-9">
-                        <a href="#" class="s-text7">
-                            Sunglasses
+                        <a href="@Url.Action("index","drugs",new { id = 4 })" class="s-text7">
+                            Vitaminlər
+                        </a>
+                    </li>
+                    <li class="p-b-9">
+                        <a href="@Url.Action("index","drugs",new { id = 5 })" class="s-text7">
+                            Bitki mənşəli dərmanlar
                         </a>
                     </li>
                 </ul>
             </div>
-
-            <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
+            <div class="col-md-4 text-center">
                 <h4 class="s-text12 p-b-30">
-                    Links
+                    Səhifələr
                 </h4>
-
                 <ul>
                     <li class="p-b-9">
-                        <a href="#" class="s-text7">
-                            Search
+                        <a href="@Url.Action("index","home")" class="s-text7">
+                            Əsas səhifə
+                        </a>
+                    </li>
+
+                    <li class="p-b-9">
+                        <a href="@Url.Action("index","drugs")" class="s-text7">
+                            Dərmanlar
+                        </a>
+                    </li>
+
+                    <li class="p-b-9">
+                        <a href="@Url.Action("index","blogs")" class="s-text7">
+                            Məqalələr
                         </a>
                     </li>
 
                     <li class="p-b-9">
                         <a href="#" class="s-text7">
-                            About Us
-                        </a>
-                    </li>
-
-                    <li class="p-b-9">
-                        <a href="#" class="s-text7">
-                            Contact Us
-                        </a>
-                    </li>
-
-                    <li class="p-b-9">
-                        <a href="#" class="s-text7">
-                            Returns
+                            Haqqımızda
                         </a>
                     </li>
                 </ul>
             </div>
-
-            <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
-                <h4 class="s-text12 p-b-30">
-                    Help
-                </h4>
-
-                <ul>
-                    <li class="p-b-9">
-                        <a href="#" class="s-text7">
-                            Track Order
-                        </a>
-                    </li>
-
-                    <li class="p-b-9">
-                        <a href="#" class="s-text7">
-                            Returns
-                        </a>
-                    </li>
-
-                    <li class="p-b-9">
-                        <a href="#" class="s-text7">
-                            Shipping
-                        </a>
-                    </li>
-
-                    <li class="p-b-9">
-                        <a href="#" class="s-text7">
-                            FAQs
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-
         </div>
-
+        <div class="row">
+            <div class="col-md-12 copyright-span">
+                <span >© 2019 Ceyhun Aptek. Bütün hüquqlar qorunur.</span>
+            </div>
+        </div>
     </footer>
 
 

@@ -12,11 +12,16 @@ namespace Aptek.Controllers
         private AptekEntities db = new AptekEntities();
 
         // GET: Drugs
-        public ActionResult Index(int?id)
+        public ActionResult Index(int?id,string name)
         {
-            List<Drug> model = db.Drugs.Where(d => id == null ? true : (d.CategoryId == id)).ToList();
+            var model = db.Drugs.Where(d => id == null ? true : (d.CategoryId == id)).AsQueryable();
 
-            return View(model);
+            if (!string.IsNullOrWhiteSpace(name))
+            {
+                model = model.Where(m => m.Name.Contains(name)).AsQueryable();
+            }
+
+            return View(model.ToList());
         }
 
         public ActionResult Details(int id)

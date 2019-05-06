@@ -30,6 +30,21 @@
     <Property Name="ValidityDuration" Type="tinyint" />
     <Property Name="Photo" Type="nvarchar" MaxLength="100" />
   </EntityType>
+  <EntityType Name="Settings">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="About" Type="nvarchar(max)" />
+    <Property Name="Phone1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Location" Type="nvarchar" MaxLength="250" />
+    <Property Name="AboutPhoto" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone3" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email3" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <Association Name="FK_Drugs_Categories">
     <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
     <End Role="Drugs" Type="Self.Drugs" Multiplicity="*" />
@@ -46,6 +61,7 @@
     <EntitySet Name="Articles" EntityType="Self.Articles" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Drugs" EntityType="Self.Drugs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Settings" EntityType="Self.Settings" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Drugs_Categories" Association="Self.FK_Drugs_Categories">
       <End Role="Categories" EntitySet="Categories" />
       <End Role="Drugs" EntitySet="Drugs" />

@@ -27,6 +27,18 @@ namespace Aptek.Controllers
             return View(model);
         }
 
+        public ActionResult About()
+        {
+            var model = db.Settings.FirstOrDefault();  
+            return View(model);
+        }
+
+        public ActionResult Contact()
+        {
+            var model = db.Settings.FirstOrDefault();
+            return View(model);
+        }
+
       
     }
 }

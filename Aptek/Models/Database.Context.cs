@@ -28,5 +28,6 @@ namespace Aptek.Models
         public virtual DbSet<Article> Articles { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Drug> Drugs { get; set; }
+        public virtual DbSet<Setting> Settings { get; set; }
     }
 }

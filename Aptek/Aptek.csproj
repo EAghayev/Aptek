@@ -177,6 +177,9 @@
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IndexModel.cs" />
+    <Compile Include="Models\Setting.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2631,6 +2634,9 @@
     <Content Include="Public\fonts\themify\SVG\zoom-in.svg" />
     <Content Include="Public\fonts\themify\SVG\zoom-out.svg" />
     <Content Include="Public\fonts\themify\themify-icons.css" />
+    <Content Include="Public\images\aptek1.jpg" />
+    <Content Include="Public\images\aptek2.jpg" />
+    <Content Include="Public\images\aptek3.jpg" />
     <Content Include="Public\images\articles\article1.jpg" />
     <Content Include="Public\images\articles\article2.jpg" />
     <Content Include="Public\images\articles\article3.jpeg" />
@@ -2754,6 +2760,7 @@
     <Content Include="Public\js\map-custom.min.js" />
     <Content Include="Public\js\slick-custom.js" />
     <Content Include="Public\js\slick-custom.min.js" />
+    <Content Include="Public\images\Pharmacist.jpg" />
     <Content Include="Public\vendor\animate\animate.css" />
     <Content Include="Public\vendor\animsition\css\animsition.css" />
     <Content Include="Public\vendor\animsition\css\animsition.min.css" />
@@ -2971,6 +2978,8 @@
     <Content Include="Views\Drugs\Details.cshtml" />
     <Content Include="Views\Blogs\Detail.cshtml" />
     <Content Include="Views\Blogs\Index.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
